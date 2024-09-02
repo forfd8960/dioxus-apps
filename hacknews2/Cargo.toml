@@ -1,0 +1,19 @@
+[package]
+name = "hacknews2"
+version = "0.1.0"
+edition = "2021"
+authors = ["forfd8960 <youknowit@gmail.com>"]
+
+[dependencies]
+tracing = "0.1.40"
+serde = { version = "1.0.203", features = ["derive"] }
+reqwest = { version = "0.12.4", default-features = false, features = [
+  "rustls-tls",
+  "json",
+] }
+chrono = { version = "0.4.38", features = ["serde"] }
+anyhow = "1.0.86"
+futures = "0.3.30"
+
+[dev-dependencies]
+tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "macros"] }
